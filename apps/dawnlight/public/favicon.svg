@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD97D"/>
+      <stop offset="100%" stop-color="#FFBE5C"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E88D3C"/>
+      <stop offset="100%" stop-color="#D4762A"/>
+    </linearGradient>
+    <linearGradient id="right" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5A952"/>
+      <stop offset="100%" stop-color="#E89440"/>
+    </linearGradient>
+  </defs>
+  <!-- Isometric cube -->
+  <!-- Top face -->
+  <polygon points="16,4 28,10 16,16 4,10" fill="url(#top)"/>
+  <!-- Left face -->
+  <polygon points="4,10 16,16 16,28 4,22" fill="url(#left)"/>
+  <!-- Right face -->
+  <polygon points="16,16 28,10 28,22 16,28" fill="url(#right)"/>
+  <!-- Subtle edges -->
+  <polygon points="16,4 28,10 16,16 4,10" fill="none" stroke="#C8751F" stroke-width="0.5" stroke-opacity="0.3"/>
+  <polygon points="4,10 16,16 16,28 4,22" fill="none" stroke="#C8751F" stroke-width="0.5" stroke-opacity="0.3"/>
+  <polygon points="16,16 28,10 28,22 16,28" fill="none" stroke="#C8751F" stroke-width="0.5" stroke-opacity="0.3"/>
+</svg>

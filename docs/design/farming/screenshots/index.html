@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dawnlight Inventory C Applied</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --page: #14110d;
+        --text: #f4eee2;
+        --muted: #c9bda8;
+        --line: rgba(244, 238, 226, 0.18);
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top, rgba(176, 115, 48, 0.18), transparent 34rem),
+          var(--page);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1320px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 24px 0 36px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 22px;
+        font-weight: 750;
+        letter-spacing: 0;
+      }
+
+      .note {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      figure {
+        margin: 0;
+        min-width: 0;
+      }
+
+      .preview {
+        display: grid;
+        place-items: center;
+        min-height: 300px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #d8d2c4;
+        background-image:
+          linear-gradient(45deg, rgba(80, 72, 60, 0.28) 25%, transparent 25%),
+          linear-gradient(-45deg, rgba(80, 72, 60, 0.28) 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, rgba(80, 72, 60, 0.28) 75%),
+          linear-gradient(-45deg, transparent 75%, rgba(80, 72, 60, 0.28) 75%);
+        background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+        background-size: 24px 24px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      figcaption {
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      figcaption strong {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: rgba(244, 238, 226, 0.45);
+        text-underline-offset: 3px;
+      }
+
+      @media (max-width: 1040px) {
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .preview {
+          min-height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Dawnlight 인벤토리 C 적용 확인</h1>
+      <p class="note">
+        후보 C를 인게임 인벤토리 배경으로 적용했습니다. 첫 이미지는 실제 게임 화면 캡처이고, 나머지는 비교용 빈 패널 후보입니다. 체크보드 영역은 투명도를 확인하기 위한 페이지 배경입니다.
+      </p>
+      <div class="gallery">
+        <figure>
+          <a class="preview" href="./2026-05-24-inventory-c-ingame-applied.png">
+            <img src="./2026-05-24-inventory-c-ingame-applied.png" alt="후보 C 인게임 인벤토리 적용 화면" />
+          </a>
+          <figcaption><strong>후보 C 적용본</strong> - C 배경 비율에 맞춰 패널을 고정하고, 좌측 인벤토리/우측 제작/레시피/핫바 오버레이를 재배치한 실제 게임 화면입니다.</figcaption>
+        </figure>
+        <figure>
+          <a class="preview" href="./2026-05-23-inventory-bg-workshop-a.png">
+            <img src="./2026-05-23-inventory-bg-workshop-a.png" alt="빈 인벤토리 배경 새 후보 A" />
+          </a>
+          <figcaption><strong>새 후보 A</strong> - 단일 넓은 패널형. 밝아졌지만 아직 목재 프레임과 금속 모서리 인상이 강합니다.</figcaption>
+        </figure>
+        <figure>
+          <a class="preview" href="./2026-05-23-inventory-bg-workshop-b.png">
+            <img src="./2026-05-23-inventory-bg-workshop-b.png" alt="빈 인벤토리 배경 새 후보 B" />
+          </a>
+          <figcaption><strong>새 후보 B</strong> - 상단 제작 영역, 중앙 인벤토리 영역, 하단 액션 영역이 분리된 기본형입니다.</figcaption>
+        </figure>
+        <figure>
+          <a class="preview" href="./2026-05-23-inventory-bg-workshop-c.png">
+            <img src="./2026-05-23-inventory-bg-workshop-c.png" alt="빈 인벤토리 배경 새 후보 C" />
+          </a>
+          <figcaption><strong>새 후보 C</strong> - 가장 밝고 정돈된 공방형 레이아웃입니다. 실제 인벤토리/조합 UI 오버레이에 맞추기 쉽습니다.</figcaption>
+        </figure>
+        <figure>
+          <a class="preview" href="./2026-05-23-inventory-bg-workshop-d.png">
+            <img src="./2026-05-23-inventory-bg-workshop-d.png" alt="빈 인벤토리 배경 새 후보 D" />
+          </a>
+          <figcaption><strong>새 후보 D</strong> - 곡선 프레임과 큰 좌측 영역이 있는 고급형입니다. 가장 완성도는 높지만 장식성이 조금 있습니다.</figcaption>
+        </figure>
+        <figure>
+          <a class="preview" href="./2026-05-23-inventory-bg-workshop-e.png">
+            <img src="./2026-05-23-inventory-bg-workshop-e.png" alt="빈 인벤토리 배경 새 후보 E" />
+          </a>
+          <figcaption><strong>새 후보 E</strong> - 식물 장식이 들어간 농사/채집 테마형입니다. Dawnlight 분위기에는 가장 잘 맞는 편입니다.</figcaption>
+        </figure>
+      </div>
+    </main>
+  </body>
+</html>

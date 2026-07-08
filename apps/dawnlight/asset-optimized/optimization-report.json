@@ -1,0 +1,225 @@
+{
+  "startedAt": "2026-05-22T09:40:07.573Z",
+  "finishedAt": "2026-05-22T09:40:39.527Z",
+  "options": {
+    "source": "asset-origin",
+    "output": "asset-optimized",
+    "textureSize": 1024,
+    "animationTextureSize": 16,
+    "textureCompress": "webp",
+    "extractTextures": true,
+    "dryRun": false
+  },
+  "files": [
+    {
+      "source": "asset-origin/meshy/apple/apple.glb",
+      "output": "asset-optimized/meshy/apple/apple.glb",
+      "textureBundle": "asset-optimized/meshy/apple/textures/apple.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 5.42,
+      "sizeMBAfter": 0.31,
+      "ratio": 0.057
+    },
+    {
+      "source": "asset-origin/meshy/apple-basket/apple-basket.glb",
+      "output": "asset-optimized/meshy/apple-basket/apple-basket.glb",
+      "textureBundle": "asset-optimized/meshy/apple-basket/textures/apple-basket.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 10.26,
+      "sizeMBAfter": 0.72,
+      "ratio": 0.0707
+    },
+    {
+      "source": "asset-origin/meshy/apple-round/apple-round.glb",
+      "output": "asset-optimized/meshy/apple-round/apple-round.glb",
+      "textureBundle": "asset-optimized/meshy/apple-round/textures/apple-round.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.45,
+      "sizeMBAfter": 0.51,
+      "ratio": 0.0607
+    },
+    {
+      "source": "asset-origin/meshy/banana/banana.glb",
+      "output": "asset-optimized/meshy/banana/banana.glb",
+      "textureBundle": "asset-optimized/meshy/banana/textures/banana.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.62,
+      "sizeMBAfter": 0.48,
+      "ratio": 0.0553
+    },
+    {
+      "source": "asset-origin/meshy/bread-loaf/bread-loaf.glb",
+      "output": "asset-optimized/meshy/bread-loaf/bread-loaf.glb",
+      "textureBundle": "asset-optimized/meshy/bread-loaf/textures/bread-loaf.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.81,
+      "sizeMBAfter": 0.51,
+      "ratio": 0.0575
+    },
+    {
+      "source": "asset-origin/meshy/empty-basket/empty-basket.glb",
+      "output": "asset-optimized/meshy/empty-basket/empty-basket.glb",
+      "textureBundle": "asset-optimized/meshy/empty-basket/textures/empty-basket.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 11.84,
+      "sizeMBAfter": 1.03,
+      "ratio": 0.0868
+    },
+    {
+      "source": "asset-origin/meshy/orange/orange.glb",
+      "output": "asset-optimized/meshy/orange/orange.glb",
+      "textureBundle": "asset-optimized/meshy/orange/textures/orange.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.68,
+      "sizeMBAfter": 0.45,
+      "ratio": 0.052
+    },
+    {
+      "source": "asset-origin/meshy/orange-textured/orange-textured.glb",
+      "output": "asset-optimized/meshy/orange-textured/orange-textured.glb",
+      "textureBundle": "asset-optimized/meshy/orange-textured/textures/orange-textured.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 6.21,
+      "sizeMBAfter": 0.28,
+      "ratio": 0.0458
+    },
+    {
+      "source": "asset-origin/meshy/peach/peach.glb",
+      "output": "asset-optimized/meshy/peach/peach.glb",
+      "textureBundle": "asset-optimized/meshy/peach/textures/peach.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.16,
+      "sizeMBAfter": 0.43,
+      "ratio": 0.0522
+    },
+    {
+      "source": "asset-origin/meshy/rice-bowl/rice-bowl.glb",
+      "output": "asset-optimized/meshy/rice-bowl/rice-bowl.glb",
+      "textureBundle": "asset-optimized/meshy/rice-bowl/textures/rice-bowl.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.07,
+      "sizeMBAfter": 0.53,
+      "ratio": 0.066
+    },
+    {
+      "source": "asset-origin/meshy/rice-bundle/rice-bundle.glb",
+      "output": "asset-optimized/meshy/rice-bundle/rice-bundle.glb",
+      "textureBundle": "asset-optimized/meshy/rice-bundle/textures/rice-bundle.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 9.97,
+      "sizeMBAfter": 0.71,
+      "ratio": 0.0715
+    },
+    {
+      "source": "asset-origin/meshy/rice-growing/rice-growing.glb",
+      "output": "asset-optimized/meshy/rice-growing/rice-growing.glb",
+      "textureBundle": "asset-optimized/meshy/rice-growing/textures/rice-growing.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 10.21,
+      "sizeMBAfter": 0.8,
+      "ratio": 0.0785
+    },
+    {
+      "source": "asset-origin/meshy/rice-mature/rice-mature.glb",
+      "output": "asset-optimized/meshy/rice-mature/rice-mature.glb",
+      "textureBundle": "asset-optimized/meshy/rice-mature/textures/rice-mature.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 11.18,
+      "sizeMBAfter": 0.88,
+      "ratio": 0.0787
+    },
+    {
+      "source": "asset-origin/meshy/rice-seedling/rice-seedling.glb",
+      "output": "asset-optimized/meshy/rice-seedling/rice-seedling.glb",
+      "textureBundle": "asset-optimized/meshy/rice-seedling/textures/rice-seedling.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 10.57,
+      "sizeMBAfter": 0.88,
+      "ratio": 0.0837
+    },
+    {
+      "source": "asset-origin/meshy/rice-seeds/rice-seeds.glb",
+      "output": "asset-optimized/meshy/rice-seeds/rice-seeds.glb",
+      "textureBundle": "asset-optimized/meshy/rice-seeds/textures/rice-seeds.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 7.1,
+      "sizeMBAfter": 0.46,
+      "ratio": 0.065
+    },
+    {
+      "source": "asset-origin/meshy/wheat-bundle/wheat-bundle.glb",
+      "output": "asset-optimized/meshy/wheat-bundle/wheat-bundle.glb",
+      "textureBundle": "asset-optimized/meshy/wheat-bundle/textures/wheat-bundle.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 9.33,
+      "sizeMBAfter": 0.68,
+      "ratio": 0.0725
+    },
+    {
+      "source": "asset-origin/meshy/wheat-growing/wheat-growing.glb",
+      "output": "asset-optimized/meshy/wheat-growing/wheat-growing.glb",
+      "textureBundle": "asset-optimized/meshy/wheat-growing/textures/wheat-growing.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 9.79,
+      "sizeMBAfter": 0.75,
+      "ratio": 0.0767
+    },
+    {
+      "source": "asset-origin/meshy/wheat-mature/wheat-mature.glb",
+      "output": "asset-optimized/meshy/wheat-mature/wheat-mature.glb",
+      "textureBundle": "asset-optimized/meshy/wheat-mature/textures/wheat-mature.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 10.08,
+      "sizeMBAfter": 0.78,
+      "ratio": 0.0774
+    },
+    {
+      "source": "asset-origin/meshy/wheat-seedling/wheat-seedling.glb",
+      "output": "asset-optimized/meshy/wheat-seedling/wheat-seedling.glb",
+      "textureBundle": "asset-optimized/meshy/wheat-seedling/textures/wheat-seedling.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 13.76,
+      "sizeMBAfter": 1.1,
+      "ratio": 0.0796
+    },
+    {
+      "source": "asset-origin/meshy/wheat-seeds/wheat-seeds.glb",
+      "output": "asset-optimized/meshy/wheat-seeds/wheat-seeds.glb",
+      "textureBundle": "asset-optimized/meshy/wheat-seeds/textures/wheat-seeds.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 8.47,
+      "sizeMBAfter": 0.56,
+      "ratio": 0.0665
+    },
+    {
+      "source": "asset-origin/meshy/wooden-hoe/wooden-hoe.glb",
+      "output": "asset-optimized/meshy/wooden-hoe/wooden-hoe.glb",
+      "textureBundle": "asset-optimized/meshy/wooden-hoe/textures/wooden-hoe.gltf",
+      "animationPack": false,
+      "textureSize": 1024,
+      "sizeMBBefore": 12.58,
+      "sizeMBAfter": 0.92,
+      "ratio": 0.0729
+    }
+  ]
+}

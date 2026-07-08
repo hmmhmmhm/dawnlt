@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap");
+@import "tailwindcss";
+
+/* Prevent mobile browser default touch behaviors (pinch-to-zoom, pull-to-refresh) */
+html,
+body {
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent iOS Safari double-tap zoom and touch callout */
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -ms-touch-action: none;
+}
+
+@layer utilities {
+  @keyframes dawnlight-guide-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .dawnlight-guide-marquee-track {
+    width: max-content;
+    animation: dawnlight-guide-marquee 14s linear infinite;
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .dawnlight-guide-marquee-track {
+      animation: none;
+    }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

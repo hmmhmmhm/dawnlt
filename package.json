@@ -1,0 +1,29 @@
+{
+  "name": "dawnlight",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "build:app": "turbo run build:app",
+    "build:lib": "turbo run build:lib",
+    "build:release": "turbo run build:release",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format:biome": "biome format --write .",
+    "check-types": "turbo run check-types",
+    "start": "node start.cjs"
+  },
+  "dependencies": {
+    "serve": "^14.2.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15",
+    "prettier": "^3.6.2",
+    "turbo": "^2.6.1",
+    "typescript": "5.9.2"
+  },
+  "packageManager": "pnpm@10.33.4",
+  "engines": {
+    "node": ">=22"
+  }
+}
