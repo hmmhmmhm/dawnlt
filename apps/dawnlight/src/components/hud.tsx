@@ -1,11 +1,14 @@
 import type { CSSProperties, ReactNode } from 'react'
 import { useEffect, useRef, useState } from 'react'
+import { FaGithub } from 'react-icons/fa'
 import { MdChangeHistory, MdClose, MdCropSquare, MdOutlineChatBubble, MdRadioButtonUnchecked } from 'react-icons/md'
 import type { InventoryItem } from '../types'
 import { triggerHaptic } from '../utils/haptics'
 import { HotbarSlot } from './hotbar-slot'
 
 type InputGuideType = 'keyboard' | 'gamepad'
+
+const PUBLIC_REPO_URL = 'https://github.com/hmmhmmhm/dawnlt'
 
 interface HudProps {
   hotbar: (InventoryItem | null)[]
@@ -362,8 +365,7 @@ export function Hud({ hotbar, selectedSlot, onToggleChat, onSlotSelect }: HudPro
 
   return (
     <>
-      {/* Mobile Chat Button - Top Left to avoid hotbar */}
-      <div className="fixed top-4 left-4 z-70 md:hidden pointer-events-auto">
+      <div className="fixed top-4 left-4 z-70 pointer-events-auto flex items-center gap-2">
         <button
           type="button"
           onClick={() => {
@@ -377,6 +379,18 @@ export function Hud({ hotbar, selectedSlot, onToggleChat, onSlotSelect }: HudPro
         >
           <MdOutlineChatBubble size={20} style={{ color: 'rgba(230,246,255,0.95)', filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.35))' }} />
         </button>
+        <a
+          href={PUBLIC_REPO_URL}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub 저장소 열기"
+          title="GitHub"
+          className="w-10 h-10 border rounded-full flex items-center justify-center text-white backdrop-blur-md active:scale-95 transition-transform"
+          style={floatingIconButtonStyle}
+          onClick={() => triggerHaptic()}
+        >
+          <FaGithub size={21} style={{ color: 'rgba(230,246,255,0.95)', filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.35))' }} />
+        </a>
       </div>
 
       <div className="fixed left-0 z-70 pointer-events-none w-full flex justify-center" style={{ bottom: `${hotbarBottom}px` }}>
