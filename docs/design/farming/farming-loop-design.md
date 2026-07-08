@@ -2,47 +2,47 @@
 
 ## Goal
 
-농사 루프는 유저가 야생 작물을 채집해서 씨앗과 재료를 얻고, 괭이와 양동이를 만들어 땅을 갈고 물을 주며, 작물을 심어 성장시킨 뒤, 쌀/밀을 밥과 빵 재료로 조합하는 순환 구조다.
+The farming loop lets players gather wild crops for seeds and ingredients, craft a hoe and bucket, prepare and water farmland, plant crops, grow them over time, then turn wheat and rice into bread and rice-bowl ingredients.
 
 ## Player Loop
 
-1. 숲/초원에서 야생 밀과 야생 쌀을 발견한다.
-2. 야생 작물을 캐면 작물 재료와 씨앗 드롭 아이템이 나온다.
-3. 나무 판자 2개로 나무 괭이를 조합하고, 판자와 조약돌로 빈 나무 양동이를 조합한다.
-4. 괭이로 잔디/흙을 우클릭해 밭으로 만든다. 물 근처나 비가 오면 젖은 밭이 된다.
-5. 빈 나무 양동이로 물 블록을 우클릭해 물 양동이를 얻고, 마른 밭에 사용해 젖은 밭으로 바꾼다.
-6. 밀 씨앗/쌀 씨앗을 밭 위에 심는다. 쌀 씨앗은 젖은 밭에만 심을 수 있다.
-7. 작물이 시간이 지나며 1단계 새싹, 2단계 어린 작물, 3단계 이삭 형성, 4단계 수확 직전까지 성장한다. 젖은 밭/비는 성장 확률을 올린다.
-8. 성숙 작물을 캐면 재료와 씨앗을 다시 얻는다.
-9. 밀은 밀가루와 반죽으로 가공하거나 바로 빵으로 조합하고, 쌀은 밥으로 조합한다.
+1. Find wild wheat and wild rice in forest or grassland areas.
+2. Break wild crops to receive crop ingredients and seed drops.
+3. Craft a wooden hoe from two planks, and craft an empty wooden bucket from planks and cobblestone.
+4. Right-click grass or dirt with the hoe to create farmland. Farmland becomes wet near water or during rain.
+5. Right-click a water block with an empty wooden bucket to get a water bucket, then use it on dry farmland to wet the soil.
+6. Plant wheat seeds or rice seeds on farmland. Rice seeds can only be planted on wet farmland.
+7. Crops grow through four stages: seedling, young crop, forming heads, and harvest-ready maturity. Wet farmland and rain increase growth odds.
+8. Break mature crops to recover ingredients and more seeds.
+9. Process wheat into flour and dough, or craft it directly into bread. Craft rice into a rice bowl.
 
 ## Blocks And Items
 
-- `FARMLAND_DRY`, `FARMLAND_WET`: 괭이질로 생성되는 밭 블록.
-- `WILD_WHEAT`, `WILD_RICE`: 월드에 자연 생성되는 채집 작물.
-- `WHEAT_CROP_1..4`, `RICE_CROP_1..4`: 심은 작물의 4단계 성장 상태.
-- `WHEAT_SEEDS`, `RICE_SEEDS`: 밭에 심을 수 있는 씨앗 아이템.
-- `WHEAT`, `RICE`: 음식 조합 재료.
-- `WOODEN_HOE`: 밭을 만드는 도구.
-- `WOODEN_BUCKET`, `WATER_BUCKET`: 물을 얻고 마른 밭에 쓰는 도구.
-- `FLOUR`, `DOUGH`: 밀을 더 긴 제작 루프로 연결하는 중간 재료.
-- `BREAD`, `RICE_BOWL`: 1차 음식 결과물.
+- `FARMLAND_DRY`, `FARMLAND_WET`: farmland blocks created with a hoe.
+- `WILD_WHEAT`, `WILD_RICE`: naturally generated gatherable crops.
+- `WHEAT_CROP_1..4`, `RICE_CROP_1..4`: the four growth states for planted crops.
+- `WHEAT_SEEDS`, `RICE_SEEDS`: seed items that can be planted on farmland.
+- `WHEAT`, `RICE`: food crafting ingredients.
+- `WOODEN_HOE`: tool used to create farmland.
+- `WOODEN_BUCKET`, `WATER_BUCKET`: tools used to collect water and wet dry farmland.
+- `FLOUR`, `DOUGH`: intermediate materials that extend the wheat crafting loop.
+- `BREAD`, `RICE_BOWL`: first-pass food outputs.
 
 ## Recipes
 
-- 판자 2개를 2x2 조합칸 상단 가로로 놓으면 `WOODEN_HOE`.
-- 판자 1개와 조약돌 1개를 대각선으로 놓으면 `WOODEN_BUCKET`.
-- 밀 1개를 놓으면 `FLOUR`.
-- 밀가루 2개를 놓으면 `DOUGH`.
-- 밀 3개를 아무 3칸에 놓으면 `BREAD`.
-- 쌀 1개를 놓으면 `RICE_BOWL`.
+- Place two planks horizontally across the top row of the 2x2 crafting grid to craft `WOODEN_HOE`.
+- Place one plank and one cobblestone diagonally to craft `WOODEN_BUCKET`.
+- Place one wheat to craft `FLOUR`.
+- Place two flour to craft `DOUGH`.
+- Place three wheat in any three slots to craft `BREAD`.
+- Place one rice to craft `RICE_BOWL`.
 
 ## Visual Direction
 
-사각 블록만 코드/텍스처 기반 렌더링을 허용한다. `FARMLAND_DRY`, `FARMLAND_WET`는 블록 표면에 고랑과 젖은 색 차이를 넣는 큐브 블록으로 유지한다.
+Only square blocks should use code-generated or texture-based rendering. `FARMLAND_DRY` and `FARMLAND_WET` stay as cube blocks with furrows and wetness color variation on the top face.
 
-사각 블록이 아닌 농사 요소는 Meshy GLB 모델을 우선 사용한다. 야생 밀/쌀, 성장 단계별 작물, 씨앗, 수확물, 나무 괭이, 양동이, 밀가루, 반죽, 빵, 밥은 코드 기반 cross mesh나 큐브 아이템으로 대신하지 않고 `public/glb/meshy/*/*.glb` 에셋을 통해 월드와 드롭 아이템에 표시한다. 코드는 배치, 스케일, 회전, 미세한 흔들림, 획득 로직만 담당한다.
+Non-square farming elements should prefer Meshy GLB models. Wild wheat and rice, crop growth stages, seeds, harvested ingredients, wooden hoes, buckets, flour, dough, bread, and rice bowls should appear in the world and as drops through `public/glb/meshy/*/*.glb` assets rather than code-generated cross meshes or cube items. Code should only handle placement, scale, rotation, subtle motion, and collection behavior.
 
 ## QA Support
 
-`?agentQa=farming` URL 파라미터를 붙이면 에이전트 브라우저 촬영용 농사 데모 필드가 자동 배치된다. 이 훅은 테스트와 시각 검수용이며 일반 플레이 URL에서는 노출되지 않는다.
+Adding the `?agentQa=farming` URL parameter creates a farming demo field for browser-based visual checks. This hook is only for testing and visual QA; it is not exposed during normal play.

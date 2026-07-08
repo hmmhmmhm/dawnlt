@@ -1,4 +1,4 @@
-# DawnLT
+# Dawnlight
 
 A voxel-based 3D world game built with React 19, Three.js, Vite, and TypeScript.
 
