@@ -10,6 +10,9 @@ type InputGuideType = 'keyboard' | 'gamepad'
 
 const PUBLIC_REPO_URL = 'https://github.com/hmmhmmhm/dawnlt'
 
+function stopHudPointer(event: { stopPropagation(): void }) { event.stopPropagation() }
+function openPublicRepo(event: { preventDefault(): void; stopPropagation(): void }) { event.preventDefault(); event.stopPropagation(); document.exitPointerLock?.(); triggerHaptic(); window.open(PUBLIC_REPO_URL, '_blank', 'noopener,noreferrer') }
+
 interface HudProps {
   hotbar: (InventoryItem | null)[]
   selectedSlot: number
@@ -365,7 +368,7 @@ export function Hud({ hotbar, selectedSlot, onToggleChat, onSlotSelect }: HudPro
 
   return (
     <>
-      <div className="fixed top-4 left-4 z-70 pointer-events-auto flex items-center gap-2">
+      <div className="fixed top-4 left-4 z-70 pointer-events-auto flex items-center gap-2" onMouseDown={stopHudPointer} onPointerDown={stopHudPointer}>
         <button
           type="button"
           onClick={() => {
@@ -387,7 +390,7 @@ export function Hud({ hotbar, selectedSlot, onToggleChat, onSlotSelect }: HudPro
           title="GitHub"
           className="w-10 h-10 border rounded-full flex items-center justify-center text-white backdrop-blur-md active:scale-95 transition-transform"
           style={floatingIconButtonStyle}
-          onClick={() => triggerHaptic()}
+          onClick={openPublicRepo}
         >
           <FaGithub size={21} style={{ color: 'rgba(230,246,255,0.95)', filter: 'drop-shadow(0 1px 1px rgba(0,0,0,0.35))' }} />
         </a>
